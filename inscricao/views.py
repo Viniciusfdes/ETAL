@@ -8,19 +8,19 @@ from django.contrib import messages
 
 def nova_inscricao(request):
     if request.method == "GET":
-        form = FormNovaInscricao()
+        form = NovaInscricaoForm()
     elif request.method == "POST":
-        form = FormNovaInscricao(request.method.POST or None)
+        form = NovaInscricaoForm(request.method.POST or None)
         if form.is_valid():
-            nome = request.POST.get('nome')
-            cpf = request.POST.get('cpf')
-            nascimento = request.POST.get('enrollment')
-            email = request.POST.get('email')
-            endereco = request.POST.get('phone')
-            sexo_masculino = request.POST.get('sexo_masculino')
-            sexo_feminino = request.POST.get('sexo_feminino')
-            curso = request.POST.get('curso')
-            minicursos = request.POST.get('minicursos')
+            # nome = request.POST.get('nome')
+            # cpf = request.POST.get('cpf')
+            # nascimento = request.POST.get('enrollment')
+            # email = request.POST.get('email')
+            # endereco = request.POST.get('phone')
+            # sexo_masculino = request.POST.get('sexo_masculino')
+            # sexo_feminino = request.POST.get('sexo_feminino')
+            # curso = request.POST.get('curso')
+            # minicursos = request.POST.get('minicursos')
 
             try: 
                 form.save()
@@ -30,3 +30,18 @@ def nova_inscricao(request):
                 pass
 
     return render(request, 'nova_inscricao.html', {'form': form})
+
+
+# def nova_inscricao(request):
+#     if request.method == 'POST':
+#         form = NovaInscricaoForm(request.POST) 
+#         if form.is_valid():
+#             try:
+#                 form.save()
+#                 form = NovaInscricaoForm()
+#             else:
+#                 pass
+#     else:
+#         form = NovaInscricaoForm()
+
+#     return render(request,'nova_inscricao.html', {'form' : form})
