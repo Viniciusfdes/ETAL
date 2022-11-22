@@ -1,0 +1,13 @@
+body {
+    background-color: #F2F2F2;
+}
+
+.bg-nav {
+    background-color: #FFFFFF !important;
+    padding: 10px;
+}
+
+.logo {
+    width: 110px;
+    height: 50px;
+}

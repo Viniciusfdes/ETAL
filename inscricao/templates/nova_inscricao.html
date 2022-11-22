@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'title' %}
+ETAL | Nova inscrição
+{% endblock%}
+
+{% block 'head' %}
+<link href="{% static 'css/nova_inscricao.css' %}" rel="stylesheet">
+<script src="{% static 'js/nova_inscricao.js' }"></script>
+{% endblock%}
+
+{% block 'body' %}
+
+<div class="wrapper">
+    <div class="box">
+        <div class="header">
+            <h5 class="titulo">Inscrição minicurso - ETAL</h5>
+        </div>
+
+        {% if messages %}
+        {% for message in messages %}
+        <section class="alert {{message.tags}}">
+            {{message}}
+        </section>
+        {% endfor %}
+        {% endif %}
+
+        <div class="body-box">
+            <form action="{% url 'nova_inscricao' %}" method="POST"> {% csrf_token %}
+                <div class="col">
+                    <div class="row-md">
+                        <label>Nome</label>
+                        {{ form.nome }}
+                    </div>
+
+                    <div class="col-md">
+                        <label>CPF</label>
+                        {{ form.cpf }}
+                    </div>
+
+                    <div class="col-md">
+                        <label>Nascimento</label>
+                        {{ form.nascimento }}
+                    </div>
+
+                    <div class="col-md">
+                        <label>Email</label>
+                        {{ form.email }}
+                    </div>
+
+                    <div class="col-md">
+                        <label>Sexo:</label>
+                        {{ form.sexo }}
+                    </div>
+
+                    <div class="col-md">
+                        <label>Curso</label>
+                        {{ form.curso }}
+                    </div>
+
+                    <div class="col-md">
+                        <label>Minicurso</label>
+                    </div>
+
+                    <input type="submit" value="Enviar" class="btn btn-lg btn-orange">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock%}

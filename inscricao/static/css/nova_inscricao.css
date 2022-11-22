@@ -1,0 +1,49 @@
+.wrapper {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    padding: 30px;
+    width: 60vw;
+    background: #fff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .3);
+}
+
+.header {
+    text-align: center;
+}
+
+.titulo {
+    color: #c94c75;
+}
+
+.body-box {
+    margin-top: 20px;
+}
+
+.btn-orange {
+    background-color: #ED8554;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #be6136;
+    color: white;
+}
+
+
+
+label {
+    color: #252525;
+    margin-right: 24px
+}
+
+@media (max-width: 1000px) {
+    .box {
+        width: 80vw;
+    }
+}
