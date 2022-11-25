@@ -28,49 +28,77 @@ ETAL | Nova inscrição
         <div class="body-box">
             <form action="{% url 'nova_inscricao' %}" method="POST"> {% csrf_token %}
                 <div class="col">
-                    <div class="row-md">
-                        <label>Nome</label>
-                        {{ form.nome }}
+                    <div class="group">
+                        <div class="col-md  form-label">
+                            <div class="labelzinha">
+                                <label>Nome</label>
+                            </div>
+                            {{ form.nome }}
+                        </div>
                     </div>
-
-                    <div class="col-md">
-                        <label>CPF</label>
-                        {{ form.cpf }}
+                    <div class="group gp">
+                        <div class="col-md form-label">
+                            <div class="labelzinha">
+                                <label>CPF</label>
+                            </div>
+                            {{ form.cpf }}
+                        </div>
                     </div>
-
-                    <div class="col-md">
-                        <label>Nascimento</label>
-                        {{ form.data_nascimento }}
+                    <div class="group gp">
+                        <div class="col-md form-label">
+                            <div class="labelzinha">
+                                <label>Nascimento</label>
+                            </div>
+                            {{ form.data_nascimento }}
+                        </div>
                     </div>
-
-                    <div class="col-md">
-                        <label>Email</label>
-                        {{ form.email }}
+                    <div class="group">
+                        <div class="col-md form-label">
+                            <div class="labelzinha">
+                                <label>Email</label>
+                            </div>
+                            {{ form.email }}
+                        </div>
                     </div>
-
-                    <div class="col-md">
-                        <label>Endereço:</label>
-                        {{ form.endereco }}
+                    <div class="group">
+                        <div class="col-md form-label">
+                            <div class="labelzinha">
+                                <label>Endereço</label>
+                            </div>
+                            {{ form.endereco }}
+                        </div>
                     </div>
-
-                    <div>
-                        <div class="row">
-                            <label>Sexo:</label>
+                    <div class="group gp">
+                        <div class="col-md form-label">
+                            <div class="labelzinha">
+                                <label>Sexo</label>
+                            </div>
                             {{ form.sexo }}
                         </div>
                     </div>
+                    <div class="group">
+                        <div class="col-md form-label">
+                            <div class="labelzinha">
+                                <label>Curso</label>
+                            </div>
+                            {{ form.tecnico }}
+                        </div>
+                    </div>
+                    <div class="group gp-u">
+                        <div class="col-md">
+                            <div class="labelzinha">
+                                <label>Minucursos:</label>
+                            </div>
+                            <div class="cursos form-check">
+                                {{ form.minicursos }}
+                            </div>
 
-                    <div class="col-md">
-                        <label>Curso</label>
-                        {{ form.tecnico }}
+                        </div>
+                    </div>
+                    <div class="btn-send">
+                        <input type="submit" value="Enviar" class="btn btn-purple">
                     </div>
 
-                    <div class="col-md">
-                        <label>Minicurso</label>
-                        {{ form.minicursos }}
-                    </div>
-
-                    <input type="submit" value="Enviar" class="btn btn-lg btn-orange">
             </form>
         </div>
     </div>

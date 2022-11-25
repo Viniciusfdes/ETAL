@@ -1,4 +1,3 @@
-from random import choices
 from django.db import models
 
 CHOICES_SEXO = [
@@ -18,14 +17,13 @@ class MiniCurso(models.Model):
     def __str__(self) -> str:
         return self.nome
 
-# Create your models here.
 class NovaInscricao(models.Model):
     nome = models.CharField(max_length=150)
     cpf = models.CharField(max_length=14) 
     data_nascimento = models.DateTimeField()
-    email = models.EmailField(14)
+    email = models.EmailField(max_length=150)
     endereco = models.CharField(max_length=200)
-    sexo = models.CharField(max_length=9, choices= CHOICES_SEXO)
+    sexo = models.CharField(max_length=9, choices= CHOICES_SEXO, default='Masculino')
     tecnico = models.CharField(max_length=11, choices=CHOICES_TECNICO)
     minicursos = models.ManyToManyField(MiniCurso)
 

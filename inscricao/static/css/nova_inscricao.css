@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-
+    margin-bottom: 3%;
 }
 
 .box {
-    padding: 30px;
-    width: 90vw;
+    padding: 30px 50px 30px 30px;
+    width: 55vw;
     background: #fff;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, .3);
 }
@@ -27,17 +27,16 @@
     margin-top: 20px;
 }
 
-.btn-orange {
-    background-color: #ED8554;
+.btn-purple {
+    background-color: #6558f5;
     color: white;
+    height: 2%;
 }
 
-.btn-orange:hover {
-    background-color: #be6136;
+.btn-purple:hover {
+    background-color: #7a6ff3;
     color: white;
 }
-
-
 
 label {
     color: #252525;
@@ -48,4 +47,47 @@ label {
     .box {
         width: 80vw;
     }
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+#id_sexo {
+    display: flex;
+    flex-direction: row;
+}
+
+.group {
+    margin-top: 16px;
+}
+
+.btn-send {
+    display: flex;
+    justify-content: right;
+    margin-top: 16px;
+}
+
+.labelzinha {
+    width: 20%;
+    text-align: right;
+}
+
+#id_cpf, #id_data_nascimento {
+    width: 50%;
+}
+
+.gp {
+    padding-right: 18%;
+}
+
+.gp-u {
+    padding-left: 4%;
+}
+
+.cursos {
+    margin-left: 12%;
+    margin-top: 8px;
 }
